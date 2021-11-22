@@ -8,16 +8,11 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/dnhyxc/vue',
-    name: 'Home'
-  },
-  {
-    path: '/dnhyxc/vue',
     name: 'Home',
     component: Home
   },
   {
-    path: '/dnhyxc/vue/about',
+    path: '/about',
     name: 'About',
     component: About
   },
