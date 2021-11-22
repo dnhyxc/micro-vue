@@ -36,8 +36,25 @@ export async function bootstrap() {
 }
 
 export async function mount(props) {
-  console.log("props from main framework", props);
   render(props);
+
+  // 获取主应用中传递的全局参数
+  props.onGlobalStateChange((state, prev) => {
+    console.log("主应用: 变更前");
+    console.log(prev);
+    console.log("主应用: 变更后");
+    console.log(state);
+  });
+
+  // 更改主应用中传递的全局参数
+  props.setGlobalState({ name: "sub-vue" });
+}
+
+/**
+ * 可选生命周期钩子，仅使用 loadMicroApp 方式加载微应用时生效
+ */
+export async function update(props) {
+  console.log("update props", props);
 }
 
 export async function unmount() {
