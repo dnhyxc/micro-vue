@@ -10,8 +10,6 @@ let instance = null;
 function render(props = {}) {
   const { container, routerBase } = props;
 
-  console.log(routerBase, "routerBase");
-
   /**
    * mode：代表路由模式
    * base：代表应用的基路径，process.env.BASE_URL是指从从环境进程中根据运行环境获取的api的base_url

@@ -9,13 +9,10 @@
 <script>
 export default {
   name: "home",
-  data() {
+  data () {
     return {
       name: "xxx",
     };
-  },
-  mounted() {
-    console.log(this.$route.query.info);
   },
 };
 </script>
